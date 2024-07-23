@@ -4,7 +4,6 @@
     "target": "es2021",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./build",
     "typeRoots": ["node_modules/@types"],
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -15,8 +14,14 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
   },
   "include": ["src/**/*.ts", "test/*.*.ts"],
-  "exclude": ["node_modules", "src/logs", "src/tests"]
+  "exclude": ["node_modules", "src/logs", "src/tests", "dist"]
 }
